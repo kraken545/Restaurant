@@ -22,8 +22,8 @@
 
     <section class="main-content">
         <div class="about-window">
-            <h1>About <?php echo $Restaurant_name; ?></h1>
-            <p>Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</p>
+            <h1>About Us</h1>
+            <h3>Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
 
             <h2>Contact Information</h2>
             <ul>

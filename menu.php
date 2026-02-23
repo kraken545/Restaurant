@@ -10,7 +10,7 @@
 </head>
 
 <body>
- <nav>
+  <nav>
     <div class="logo">Pizzeria Latina</div>
     <ul>
 
@@ -20,8 +20,8 @@
     </ul>
   </nav>
   <section class="back-blur">
-  <div class="text-menu">Our Menu</div>
-  
+    <div class="text-menu">Our Menu</div>
+
     <section class="menu-container">
 
 
