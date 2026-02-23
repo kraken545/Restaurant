@@ -54,7 +54,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #a71e22;
-    border: 1px whitesmoke solid;
+    border: 1px white solid;
     border-radius: 8px;
     backdrop-filter: blur(5px);
 
