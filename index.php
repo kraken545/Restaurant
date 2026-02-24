@@ -44,7 +44,7 @@
 
 
   <footer>
-    <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="italiano-style ">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
   <script src="anim.js"></script>
