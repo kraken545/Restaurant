@@ -22,10 +22,10 @@
 
     <section class="main-content">
         <div class="about-window">
-            <h1>About Us</h1>
+            <h1 class="dancing">About Us</h1>
             <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
 
-            <h2 class="italiano-style">Contact Information</h2>
+            <h2 class="dancing">Contact Information</h2>
             <ul>
                 <p class="italiano-style"> <strong>Address:</strong> <?php echo $Address; ?> </p>
                 <p class="italiano-style"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>

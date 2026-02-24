@@ -29,6 +29,12 @@ body {
     align-self: center;
 }
 
+.dancing {
+    font-weight: 400;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+}
+
 /* Navigation */
 nav {
     background: linear-gradient(90deg, #ab2b40 0%, #d91717 100%);
@@ -74,7 +80,6 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5em;
-    font-family: 'Dancing Script', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -82,7 +87,6 @@ h2 {
     color: #00ec59;
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #00ec59;
     padding-bottom: 5px;
     font-size: xx-large;
 }
@@ -134,7 +138,7 @@ section {
     display: flex;
     align-items: center;
     height: 85vh;
-
+    text-shadow: 3px 3px 3px #75727296;
     backdrop-filter: brightness(0.7);
     background-color: transparent;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -159,15 +163,12 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-
 }
 
 .pizza-content h1 {
     font-size: 5em;
     color: #00ec59;
     margin-top: -50px;
-
 }
 
 
@@ -216,10 +217,17 @@ h2 {
 
 .about-window h1 {
     color: #ff6262;
+    border-bottom: 2px solid #ff6262;
+    width: 25%;
+    justify-self: center;
 }
 
 .about-window h2 {
+
     color: #00ec59;
+    border-bottom: 2px solid #00ec59;
+    width: 45%;
+    justify-self: center;
 }
 
 

@@ -26,7 +26,7 @@
   <section class="pizza">
     <div class="pizza-content">
       <div class="pizza-content-div">
-        <h1>
+        <h1 class="dancing">
           Welcome to
           <?php echo $Restaurant_name; ?>
         </h1>
@@ -36,7 +36,7 @@
         </p>
       </div>
       <div class="pizza-content-div">
-        <h2>About Our Pizzeria</h2>
+        <h2 class="dancing">About Our Pizzeria</h2>
         <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
       </div>
     </div>
@@ -44,7 +44,7 @@
 
 
   <footer>
-    <p class="italiano-style ">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="italiano-style" id="indexfoter">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
   <script src="anim.js"></script>
