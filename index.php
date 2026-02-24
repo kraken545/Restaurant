@@ -30,21 +30,21 @@
           Welcome to
           <?php echo $Restaurant_name; ?>
         </h1>
-        <p>
+        <p class="italiano-style groter">
           Experience the finest Latin cuisine in a warm and welcoming
           atmosphere
         </p>
       </div>
       <div class="pizza-content-div">
         <h2>About Our Pizzeria</h2>
-        <p>Enjoy our delicious pizzas and more!</p>
+        <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
       </div>
     </div>
   </section>
 
 
   <footer>
-    <p>&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
   <script src="anim.js"></script>

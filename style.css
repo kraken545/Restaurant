@@ -19,9 +19,14 @@ body {
     display: flex;
     flex-direction: column;
     background-size: cover;
+}
+
+.italiano-style {
     font-family: "Italianno", cursive;
     font-weight: 400;
     font-style: normal;
+    justify-self: center;
+    align-self: center;
 }
 
 /* Navigation */
@@ -98,7 +103,6 @@ h4 {
 p {
     margin-bottom: 10px;
     text-align: justify;
-    font-size: xxx-large;
 }
 
 /* Section styling */
@@ -142,7 +146,6 @@ section {
     width: 100%;
     height: 200px;
     backdrop-filter: brightness(0.8);
-
     color: white;
     display: flex;
     flex-direction: column;
@@ -161,10 +164,13 @@ section {
 }
 
 .pizza-content h1 {
-    font-size: 6em;
+    font-size: 5em;
     color: #00ec59;
+    margin-top: -50px;
 
 }
+
+
 
 .main-content {
     width: 100%;
@@ -213,7 +219,7 @@ h2 {
 }
 
 .about-window h2 {
-    color: #56ff96;
+    color: #00ec59;
 }
 
 
@@ -291,7 +297,10 @@ h2 {
     gap: 10px;
 }
 
+.groter {
+    font-size: 3em;
 
+}
 
 .submenu {
     margin-bottom: 30px;
@@ -411,5 +420,6 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    display: block;
 }

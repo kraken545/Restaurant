@@ -23,19 +23,19 @@
     <section class="main-content">
         <div class="about-window">
             <h1>About Us</h1>
-            <h3>Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
+            <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
 
-            <h2>Contact Information</h2>
+            <h2 class="italiano-style">Contact Information</h2>
             <ul>
-                <p> <strong>Address:</strong> <?php echo $Address; ?> </p>
-                <p> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
-                <p><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
+                <p class="italiano-style"> <strong>Address:</strong> <?php echo $Address; ?> </p>
+                <p class="italiano-style"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
+                <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
             </ul>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+        <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
     </footer>
 
     <script src="anim.js"></script>
