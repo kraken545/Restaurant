@@ -19,6 +19,9 @@ body {
     display: flex;
     flex-direction: column;
     background-size: cover;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Navigation */
@@ -71,11 +74,12 @@ h1 {
 }
 
 h2 {
-    color: #56ff96;
+    color: #00ec59;
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #56ff96;
+    border-bottom: 2px solid #00ec59;
     padding-bottom: 5px;
+    font-size: xx-large;
 }
 
 h3 {
@@ -94,6 +98,7 @@ h4 {
 p {
     margin-bottom: 10px;
     text-align: justify;
+    font-size: xxx-large;
 }
 
 /* Section styling */
@@ -156,14 +161,9 @@ section {
 }
 
 .pizza-content h1 {
-    font-size: 5em;
-    color: #56ff96;
+    font-size: 6em;
+    color: #00ec59;
 
-}
-
-.piza-content p {
-    font-size: 1.2em;
-    margin-bottom: 0;
 }
 
 .main-content {
@@ -205,11 +205,6 @@ h2 {
 .about-window h3 {
     font-size: 1.2em;
     color: white;
-    font-family: "Italianno", cursive;
-    font-weight: 400;
-    font-style: normal;
-    align-self: center;
-    justify-self: center;
 }
 
 
@@ -227,6 +222,7 @@ h2 {
     text-align: center;
     align-items: center;
     color: white;
+
 }
 
 /* Menu page styling */
