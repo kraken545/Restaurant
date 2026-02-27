@@ -1,4 +1,5 @@
-<?php include('data.php'); ?>
+<?php include('data.php');
+include('db_connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
