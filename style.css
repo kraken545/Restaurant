@@ -395,6 +395,20 @@ h2 {
     font-size: 0.95em;
 }
 
+.reviews {}
+
+.rv-box {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1a1818;
+    background-color: transparent;
+
+
+}
+
 /* Responsive menu */
 @media (max-width: 768px) {
     .menu-items {

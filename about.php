@@ -1,4 +1,8 @@
-<?php include('data.php'); ?>
+<?php include('data.php');
+include('db_connection.php');
+$sql = "SELECT naam FROM clients";
+$con = $conn->query($sql); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +36,29 @@
                 <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
             </ul>
         </div>
+        <div class="reviews">
+            <div class="rv-box">
+                <ul>
+                    <?php
+                    echo "<li>" . $namen[0] . "</li>";
+                    ?>
+                </ul>
+            </div>
+            <div class="rv-box">
+                <?php
+                echo "<li>" . $namen[1] . "</li>";
+                ?>
+            </div>
+            <div class="rv-box">
+                <?php
+                echo "<li>" . $namen[2] . "</li>";
+                ?>
+            </div>
+            <div class="rv-box">
+                <?php
+                echo "<li>" . $namen[3] . "</li>";
+                ?>
+            </div>
     </section>
 
     <footer>
