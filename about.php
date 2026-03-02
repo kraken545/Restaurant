@@ -36,6 +36,12 @@ $con = $conn->query($sql); ?>
                 <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
             </ul>
         </div>
+        <div id="cartSidebar">
+            <h3>Carrito</h3>
+            <ul id="cartItems"></ul>
+            <div id="cartTotal">Total: €0.00</div>
+            <button id="checkoutBtn">Pagar</button>
+        </div>
         <div class="reviews">
             <div class="rv-box">
                 <ul>
@@ -59,13 +65,16 @@ $con = $conn->query($sql); ?>
                 echo "<li>" . $namen[3] . "</li>";
                 ?>
             </div>
+
     </section>
 
     <footer>
         <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
     </footer>
 
-    <script src="anim.js"></script>
+
+
+    <script src="cart.js"></script>
 </body>
 
 </html>

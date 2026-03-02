@@ -1,5 +1,5 @@
 <?php include('data.php');
-include('db_connection.php'); 
+include('db_connection.php');
 $sql = "SELECT naam FROM clients";
 $con = $conn->query($sql);
 
@@ -45,6 +45,12 @@ $con = $conn->query($sql);
         <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
       </div>
     </div>
+    <div class="cartSidebar">
+      <div>Carrito</div>
+      <div id="cartItems"></div>
+      <div id="cartTotal">Total: €0.00</div>
+      <button id="checkoutBtn">Pagar</button>
+    </div>
   </section>
 
 
@@ -52,7 +58,9 @@ $con = $conn->query($sql);
     <p class="italiano-style" id="indexfoter">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
-  <script src="anim.js"></script>
+
+
+  <script src="cart.js"></script>
 </body>
 
 </html>

@@ -395,7 +395,15 @@ h2 {
     font-size: 0.95em;
 }
 
-.reviews {}
+.reviews {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .rv-box {
     width: 150px;
@@ -444,4 +452,80 @@ footer p {
     margin: 0;
     font-size: 0.9em;
     display: block;
+}
+
+/* Cart sidebar styles */
+.cartSidebar {
+    position: fixed;
+    right: 0;
+
+    width: 300px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#cartSidebar h3 {}
+
+#cartItems {}
+
+#cartItems li {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#cartTotal {
+    font-weight: 700;
+    margin-top: 8px;
+    width: 200px;
+    height: 20vh;
+}
+
+#checkoutBtn {
+    background: #00ec59;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menu-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    gap: 10px;
+}
+
+.price {
+    font-weight: 700;
+    color: #000000;
+}
+
+.add-to-cart {
+    width: 30px;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #f11b3f9e;
+    color: black;
+}
+
+/* Leave space for the fixed sidebar */
+body {
+    padding-right: 330px;
+}
+
+@media (max-width: 900px) {
+    #cartSidebar {
+        display: none;
+    }
+
+    body {
+        padding-right: 0;
+    }
 }
