@@ -10,7 +10,6 @@
 
 /* Body styling */
 body {
-    height: auto;
     font-family: 'Roboto', Arial, sans-serif;
     height: 100vh;
     background-image: url(img/alpine_pizza_32132_16x9.jpg);
@@ -482,15 +481,7 @@ footer p {
     height: 20vh;
 }
 
-#checkoutBtn {
-    background: #00ec59;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
+
 
 .menu-meta {
     display: flex;
