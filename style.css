@@ -171,7 +171,39 @@ section {
     margin-top: -50px;
 }
 
+.home-content {
+    width: 1000px;
+    height: 100vh;
+    display: flex;
+    background-color: red;
+    flex-direction: row;
 
+
+}
+
+.reviews {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+
+
+}
+
+.rv-box {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1a1818;
+    background-color: transparent;
+
+
+}
 
 .main-content {
     width: 100%;
@@ -395,19 +427,7 @@ h2 {
     font-size: 0.95em;
 }
 
-.reviews {}
 
-.rv-box {
-    width: 150px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #1a1818;
-    background-color: transparent;
-
-
-}
 
 /* Responsive menu */
 @media (max-width: 768px) {

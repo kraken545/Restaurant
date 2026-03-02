@@ -1,5 +1,5 @@
 <?php include('data.php');
-include('db_connection.php'); 
+include('db_connection.php');
 $sql = "SELECT naam FROM clients";
 $con = $conn->query($sql);
 
@@ -29,20 +29,46 @@ $con = $conn->query($sql);
   </nav>
 
   <section class="pizza">
-    <div class="pizza-content">
-      <div class="pizza-content-div">
-        <h1 class="dancing">
-          Welcome to
-          <?php echo $Restaurant_name; ?>
-        </h1>
-        <p class="italiano-style groter">
-          Experience the finest Latin cuisine in a warm and welcoming
-          atmosphere
-        </p>
+    <div class="home-content">
+      <div class="pizza-content">
+        <div class="pizza-content-div">
+          <h1 class="dancing">
+            Welcome to
+            <?php echo $Restaurant_name; ?>
+          </h1>
+          <p class="italiano-style groter">
+            Experience the finest Latin cuisine in a warm and welcoming
+            atmosphere
+          </p>
+        </div>
+        <div class="pizza-content-div">
+          <h2 class="dancing">About Our Pizzeria</h2>
+          <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
+        </div>
       </div>
-      <div class="pizza-content-div">
-        <h2 class="dancing">About Our Pizzeria</h2>
-        <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
+      <div class="reviews">
+        <div class="rv-box">
+          <ul>
+            <?php
+            echo "<li>" . $namen[0] . "</li>";
+            ?>
+          </ul>
+        </div>
+        <div class="rv-box">
+          <?php
+          echo "<li>" . $namen[1] . "</li>";
+          ?>
+        </div>
+        <div class="rv-box">
+          <?php
+          echo "<li>" . $namen[2] . "</li>";
+          ?>
+        </div>
+        <div class="rv-box">
+          <?php
+          echo "<li>" . $namen[3] . "</li>";
+          ?>
+        </div>
       </div>
     </div>
   </section>

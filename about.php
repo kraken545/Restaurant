@@ -36,29 +36,6 @@ $con = $conn->query($sql); ?>
                 <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
             </ul>
         </div>
-        <div class="reviews">
-            <div class="rv-box">
-                <ul>
-                    <?php
-                    echo "<li>" . $namen[0] . "</li>";
-                    ?>
-                </ul>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[1] . "</li>";
-                ?>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[2] . "</li>";
-                ?>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[3] . "</li>";
-                ?>
-            </div>
     </section>
 
     <footer>
