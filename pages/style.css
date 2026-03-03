@@ -12,7 +12,7 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     height: 100vh;
-    background-image: url(img/alpine_pizza_32132_16x9.jpg);
+    background-image: url(../img/alpine_pizza_32132_16x9.jpg);
     background-position: center;
     justify-content: space-between;
     display: flex;
@@ -313,7 +313,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-#pizza-menu {
+#scrolbar {
     display: block;
     overflow-y: scroll;
     scrollbar-color: transparent transparent;
@@ -321,7 +321,8 @@ h2 {
     padding: 10px;
 }
 
-.submenu h3 {
+.submenu h3,
+.title {
     color: #ffffff;
     background: linear-gradient(90deg, #583e3ee4 0%, #d4260ed9 100%);
     font-size: 1.3em;
@@ -329,6 +330,8 @@ h2 {
     padding: 8px 15px;
     border-radius: 6px;
     border-left: 4px solid #805c10;
+    font-weight: bold;
+
 }
 
 .menu-items {
@@ -347,7 +350,7 @@ h2 {
     border: 1px solid #e0e0e0;
     transition: all 0.3s ease;
     padding: 10px;
-
+    position: relative;
     overflow: hidden;
     background-color: rgba(144, 112, 112, 0.233);
 }
@@ -457,31 +460,45 @@ footer p {
 .cartSidebar {
     position: fixed;
     right: 0;
-
-    width: 300px;
-    height: 80vh;
+    top: 10vh;
+    width: 150px;
+    height: 40vh;
     display: flex;
     flex-direction: column;
 }
 
-#cartSidebar h3 {}
 
 #cartItems {}
 
 #cartItems li {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 #cartTotal {
-    font-weight: 700;
-    margin-top: 8px;
-    width: 200px;
-    height: 20vh;
+    font-weight: 300;
+    width: 100px;
+    height: 10vh;
+    color: white;
 }
 
 
+#checkoutBtn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f11b3f9e;
+    color: white;
+}
+
+#checkoutBtn:hover {
+    background-color: #be161b;
+    box-shadow: #000000 0px 4px 15px;
+
+}
 
 .menu-meta {
     display: flex;
@@ -497,19 +514,16 @@ footer p {
 }
 
 .add-to-cart {
-    width: 30px;
-    height: auto;
+    width: 100px;
+    height: 30px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #f11b3f9e;
-    color: black;
+    border: 1px solid #0000009e;
+    background-color: transparent;
+    box-shadow: #00ec59;
 }
 
-/* Leave space for the fixed sidebar */
-body {
-    padding-right: 330px;
-}
 
 @media (max-width: 900px) {
     #cartSidebar {

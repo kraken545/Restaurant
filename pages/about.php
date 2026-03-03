@@ -1,5 +1,5 @@
 <?php include('data.php');
-include('db_connection.php');
+include('../dbcalls/db_connection.php');
 $sql = "SELECT naam FROM clients";
 $con = $conn->query($sql); ?>
 
@@ -10,7 +10,7 @@ $con = $conn->query($sql); ?>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $Restaurant_name; ?> - About</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../pages/style.css" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@ $con = $conn->query($sql); ?>
         <div class="logo">Pizzeria Latina</div>
         <ul>
 
-            <li><a href="index.php">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="menu.php">Menu</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
@@ -36,7 +36,7 @@ $con = $conn->query($sql); ?>
                 <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
             </ul>
         </div>
-        <div id="cartSidebar">
+        <div class="cartSidebar">
             <h3>Carrito</h3>
             <ul id="cartItems"></ul>
             <div id="cartTotal">Total: €0.00</div>

@@ -1,5 +1,5 @@
 <?php include('data.php');
-include('db_connection.php'); ?>
+include('../dbcalls/db_connection.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@ include('db_connection.php'); ?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $Restaurant_name; ?> - Menu</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../pages/style.css" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@ include('db_connection.php'); ?>
     <div class="logo">Pizzeria Latina</div>
     <ul>
 
-      <li><a href="index.php">Home</a></li>
+      <li><a href="../index.php">Home</a></li>
       <li><a href="menu.php">Menu</a></li>
       <li><a href="about.php">About</a></li>
     </ul>
@@ -27,7 +27,7 @@ include('db_connection.php'); ?>
     <section class="menu-container">
 
 
-      <div class="menu-section">
+      <div class="menu-section" id="scrolbar">
         <h2>🍽️ Appetizers</h2>
         <div class="menu-items">
           <div class="menu-item">
@@ -35,7 +35,7 @@ include('db_connection.php'); ?>
             <p>Toasted bread with tomato, basil and olive oil.</p>
             <div class="menu-meta">
               <span class="price">€6.50</span>
-              <button class="add-to-cart" data-name="Bruschetta" data-price="6.5">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Bruschetta" data-price="6.5"><?php echo $add; ?></button>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ include('db_connection.php'); ?>
             <p>Fried wings with spicy sauce or barbecue.</p>
             <div class="menu-meta">
               <span class="price">€8.50</span>
-              <button class="add-to-cart" data-name="Chicken Wings" data-price="8.5">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Chicken Wings" data-price="8.5"><?php echo $add; ?></button>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ include('db_connection.php'); ?>
             </p>
             <div class="menu-meta">
               <span class="price">€7.00</span>
-              <button class="add-to-cart" data-name="Caesar Salad" data-price="7.0">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Caesar Salad" data-price="7.0"><?php echo $add; ?></button>
             </div>
           </div>
 
@@ -66,13 +66,13 @@ include('db_connection.php'); ?>
             </p>
             <div class="menu-meta">
               <span class="price">€6.00</span>
-              <button class="add-to-cart" data-name="Mozzarella Sticks" data-price="6.0">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Mozzarella Sticks" data-price="6.0"><?php echo $add; ?></button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="menu-section" id="pizza-menu">
+      <div class="menu-section" id="scrolbar">
         <h2>🍕 Pizzas</h2>
 
         <div class="submenu">
@@ -83,7 +83,7 @@ include('db_connection.php'); ?>
               <p>Tomato sauce, mozzarella, fresh basil.</p>
               <div class="menu-meta">
                 <span class="price">€9.00</span>
-                <button class="add-to-cart" data-name="Margherita" data-price="9.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Margherita" data-price="9.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -92,7 +92,7 @@ include('db_connection.php'); ?>
               <p>Tomato sauce, mozzarella and pepperoni slices.</p>
               <div class="menu-meta">
                 <span class="price">€10.00</span>
-                <button class="add-to-cart" data-name="Pepperoni" data-price="10.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Pepperoni" data-price="10.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ include('db_connection.php'); ?>
               <p>Mix of mozzarella, gorgonzola, parmesan and goat cheese.</p>
               <div class="menu-meta">
                 <span class="price">€11.00</span>
-                <button class="add-to-cart" data-name="Four Cheese" data-price="11.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Four Cheese" data-price="11.0"><?php echo $add; ?></button>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ include('db_connection.php'); ?>
               <p>Barbecue sauce, grilled chicken, red onion and cilantro.</p>
               <div class="menu-meta">
                 <span class="price">€12.00</span>
-                <button class="add-to-cart" data-name="BBQ Chicken Pizza" data-price="12.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="BBQ Chicken Pizza" data-price="12.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -124,7 +124,7 @@ include('db_connection.php'); ?>
               <p>Tomato sauce, mozzarella, ham and pineapple.</p>
               <div class="menu-meta">
                 <span class="price">€11.00</span>
-                <button class="add-to-cart" data-name="Hawaiian" data-price="11.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Hawaiian" data-price="11.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -135,7 +135,7 @@ include('db_connection.php'); ?>
               </p>
               <div class="menu-meta">
                 <span class="price">€10.00</span>
-                <button class="add-to-cart" data-name="Vegetarian" data-price="10.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Vegetarian" data-price="10.0"><?php echo $add; ?></button>
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ include('db_connection.php'); ?>
               <p>Cream sauce, mozzarella, mushrooms and truffle oil.</p>
               <div class="menu-meta">
                 <span class="price">€15.00</span>
-                <button class="add-to-cart" data-name="Truffle Pizza" data-price="15.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Truffle Pizza" data-price="15.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -160,7 +160,7 @@ include('db_connection.php'); ?>
               </p>
               <div class="menu-meta">
                 <span class="price">€13.00</span>
-                <button class="add-to-cart" data-name="Mediterranean Pizza" data-price="13.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Mediterranean Pizza" data-price="13.0"><?php echo $add; ?></button>
               </div>
             </div>
 
@@ -171,46 +171,101 @@ include('db_connection.php'); ?>
               </p>
               <div class="menu-meta">
                 <span class="price">€12.00</span>
-                <button class="add-to-cart" data-name="Spicy Pizza" data-price="12.0">Agregar al carrito</button>
+                <button class="add-to-cart" data-name="Spicy Pizza" data-price="12.0"><?php echo $add; ?></button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="menu-section">
+      <div class="menu-section" id="scrolbar">
         <h2>🥤 Beverages</h2>
         <div class="menu-items">
+          <div class="title">
+            <div> Soft Drinks </div>
+
+          </div>
           <div class="menu-item">
-            <h3>Soft Drinks</h3>
-            <p>Coca-Cola, Sprite, Fanta, mineral water.</p>
+            <p> Coca-Cola </p>
             <div class="menu-meta">
               <span class="price">€2.50</span>
-              <button class="add-to-cart" data-name="Soft Drinks" data-price="2.5">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Soft Drinks" data-price="2.5"><?php echo $add; ?></button>
             </div>
           </div>
-
           <div class="menu-item">
-            <h3>Beers</h3>
-            <p>Local beer, craft beer, alcohol-free beer.</p>
+            <p> Sprite </p>
             <div class="menu-meta">
-              <span class="price">€4.50</span>
-              <button class="add-to-cart" data-name="Beers" data-price="4.5">Agregar al carrito</button>
+              <span class="price">€2.50</span>
+              <button class="add-to-cart" data-name="Soft Drinks" data-price="2.5"><?php echo $add; ?></button>
             </div>
           </div>
-
           <div class="menu-item">
-            <h3>Wines</h3>
-            <p>Red wine, white wine, rosé wine.</p>
+            <p> Fanta </p>
+            <div class="menu-meta">
+              <span class="price">€2.50</span>
+              <button class="add-to-cart" data-name="Soft Drinks" data-price="2.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p> Mineral water </p>
+            <div class="menu-meta">
+              <span class="price">€2.50</span>
+              <button class="add-to-cart" data-name="Soft Drinks" data-price="2.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="title">
+            <div>Beers</div>
+
+          </div>
+          <div class="menu-item">
+            <p>Local beer</p>
+            <div class=" menu-meta">
+              <span class="price">€4.50</span>
+              <button class="add-to-cart" data-name="Beers" data-price="4.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p> craft beer</p>
+            <div class=" menu-meta">
+              <span class="price">€4.50</span>
+              <button class="add-to-cart" data-name="Beers" data-price="4.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p> alcohol-free beer</p>
+            <div class=" menu-meta">
+              <span class="price">€4.50</span>
+              <button class="add-to-cart" data-name="Beers" data-price="4.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="title">
+            <div>Wines</div>
+          </div>
+          <div class="menu-item">
+            <p>Red wine</p>
             <div class="menu-meta">
               <span class="price">€6.50</span>
-              <button class="add-to-cart" data-name="Wines" data-price="6.5">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Wines" data-price="6.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p> white wine</p>
+            <div class="menu-meta">
+              <span class="price">€6.50</span>
+              <button class="add-to-cart" data-name="Wines" data-price="6.5"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p> rosé wine</p>
+            <div class="menu-meta">
+              <span class="price">€6.50</span>
+              <button class="add-to-cart" data-name="Wines" data-price="6.5"><?php echo $add; ?></button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="menu-section">
+      <div class="menu-section" id="scrolbar">
         <h2>🍰 Desserts</h2>
         <div class="menu-items">
           <div class="menu-item">
@@ -218,27 +273,43 @@ include('db_connection.php'); ?>
             <p>Creamy cheese tart with strawberry jam.</p>
             <div class="menu-meta">
               <span class="price">€5.00</span>
-              <button class="add-to-cart" data-name="Cheesecake" data-price="5.0">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Cheesecake" data-price="5.0"><?php echo $add; ?></button>
             </div>
           </div>
-
-          <div class="menu-item">
-            <h3>Ice Cream</h3>
-            <p>Varieties: vanilla, chocolate, strawberry.</p>
-            <div class="menu-meta">
-              <span class="price">€4.00</span>
-              <button class="add-to-cart" data-name="Ice Cream" data-price="4.0">Agregar al carrito</button>
-            </div>
-          </div>
-
           <div class="menu-item">
             <h3>Chocolate Brownie</h3>
             <p>Warm brownie with walnuts, served with vanilla ice cream.</p>
             <div class="menu-meta">
               <span class="price">€5.00</span>
-              <button class="add-to-cart" data-name="Chocolate Brownie" data-price="5.0">Agregar al carrito</button>
+              <button class="add-to-cart" data-name="Chocolate Brownie" data-price="5.0"><?php echo $add; ?></button>
             </div>
           </div>
+          <div class="title">
+            <div>Ice Cream</div>
+          </div>
+          <div class="menu-item">
+            <p>Vanilla</p>
+            <div class="menu-meta">
+              <span class="price">€4.00</span>
+              <button class="add-to-cart" data-name="Ice Cream - Vanilla" data-price="4.0"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p>Chocolate</p>
+            <div class="menu-meta">
+              <span class="price">€4.00</span>
+              <button class="add-to-cart" data-name="Ice Cream - Chocolate" data-price="4.0"><?php echo $add; ?></button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <p>Strawberry</p>
+            <div class="menu-meta">
+              <span class="price">€4.00</span>
+              <button class="add-to-cart" data-name="Ice Cream - Strawberry" data-price="4.0"><?php echo $add; ?></button>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <div id="cartSidebar">

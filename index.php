@@ -1,5 +1,5 @@
-<?php include('data.php');
-include('db_connection.php');
+<?php include('pages/data.php');
+include('dbcalls/db_connection.php');
 $sql = "SELECT naam FROM clients";
 $con = $conn->query($sql);
 
@@ -11,7 +11,7 @@ $con = $conn->query($sql);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $Restaurant_name; ?> - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@ $con = $conn->query($sql);
     <ul>
 
       <li><a href="index.php">Home</a></li>
-      <li><a href="menu.php">Menu</a></li>
-      <li><a href="about.php">About</a></li>
+      <li><a href="pages/menu.php">Menu</a></li>
+      <li><a href="pages/about.php">About</a></li>
     </ul>
   </nav>
 
