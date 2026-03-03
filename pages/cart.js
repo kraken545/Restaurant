@@ -45,11 +45,11 @@
   const checkout = document.getElementById('checkoutBtn');
   if(checkout){
     checkout.addEventListener('click', function(){
-      if(cart.length === 0){ alert('El carrito está vacío.'); return; }
+      if(cart.length === 0){ alert('de cart is empty.'); return; }
       // Simple behaviour: show summary then clear
       const names = cart.map(i => i.name + ' €' + i.price.toFixed(2)).join('\n');
       const total = cart.reduce((s,i)=>s+i.price,0).toFixed(2);
-      alert('Pedido:\n' + names + '\n\nTotal: €' + total + '\n\nGracias!');
+      alert('youre order:\n' + names + '\n\nTotal: €' + total + '\n\ thanks! & enjoy your meal ;)');
       cart = []; save(); renderCart();
     });
   }

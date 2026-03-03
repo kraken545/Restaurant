@@ -46,16 +46,18 @@ $con = $conn->query($sql);
       </div>
     </div>
     <div class="cartSidebar">
-      <div>Carrito</div>
+      <h3>Carrito</h3>
       <div id="cartItems"></div>
-      <div id="cartTotal">Total: €0.00</div>
-      <button id="checkoutBtn">Pagar</button>
+      <div class="afrekenen-cart">
+        <div id="cartTotal">Total: €0.00</div>
+        <button id="checkoutBtn">afrekenen</button>
+      </div>
     </div>
   </section>
 
 
   <footer>
-    <p class="italiano-style" id="indexfoter">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
 

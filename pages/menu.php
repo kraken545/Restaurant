@@ -22,8 +22,15 @@ include('../dbcalls/db_connection.php'); ?>
     </ul>
   </nav>
   <section class="back-blur">
+    <div class="top-menu">
     <div class="text-menu">Our Menu</div>
-
+    <div class="cartSidebar">
+      <h3>Carrito</h3>
+      <ul id="cartItems"></ul>
+      <div id="cartTotal">Total: €0.00</div>
+      <button id="checkoutBtn">afrekenen</button>
+    </div>
+</div>
     <section class="menu-container">
 
 
@@ -312,17 +319,13 @@ include('../dbcalls/db_connection.php'); ?>
 
         </div>
       </div>
-      <div id="cartSidebar">
-        <h3>Carrito</h3>
-        <ul id="cartItems"></ul>
-        <div id="cartTotal">Total: €0.00</div>
-        <button id="checkoutBtn">Pagar</button>
-      </div>
+      <div class="spacecart"></div>
+
     </section>
   </section>
 
   <footer>
-    <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
   <script src="cart.js"></script>
 </body>

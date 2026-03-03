@@ -25,6 +25,7 @@ $con = $conn->query($sql); ?>
     </nav>
 
     <section class="main-content">
+        <div class="about-content">
         <div class="about-window">
             <h1 class="dancing">About Us</h1>
             <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
@@ -40,8 +41,9 @@ $con = $conn->query($sql); ?>
             <h3>Carrito</h3>
             <ul id="cartItems"></ul>
             <div id="cartTotal">Total: €0.00</div>
-            <button id="checkoutBtn">Pagar</button>
+            <button id="checkoutBtn">afrekenen</button>
         </div>
+</div>
         <div class="reviews">
             <div class="rv-box">
                 <ul>
@@ -69,7 +71,7 @@ $con = $conn->query($sql); ?>
     </section>
 
     <footer>
-        <p class="italiano-style">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+        <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
     </footer>
 
 
