@@ -483,9 +483,13 @@ footer p {
     border-radius: 5%;
 
 }
-.afrekenen-cart{
-    
 
+.afrekenen-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-self: flex-end;
 }
 
 .top-menu {
@@ -517,8 +521,8 @@ footer p {
     position: absolute;
     bottom: 0;
     right: 0;
-    
-    
+
+
 }
 
 
