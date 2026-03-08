@@ -1,7 +1,7 @@
 <?php include('data.php');
 include('../dbcalls/db_connection.php');
 $sql = "SELECT naam FROM clients";
-$con = $conn->query($sql); ?>
+$con = $conn->prepare($sql); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ $con = $conn->query($sql); ?>
             <button id="checkoutBtn">afrekenen</button>
         </div>
 </div>
-        <div class="reviews">
+        <!-- <div class="reviews">
             <div class="rv-box">
                 <ul>
                     <?php
@@ -67,6 +67,7 @@ $con = $conn->query($sql); ?>
                 echo "<li>" . $namen[3] . "</li>";
                 ?>
             </div>
+        </div> -->
 
     </section>
 

@@ -1,7 +1,5 @@
 <?php include('pages/data.php');
 include('dbcalls/db_connection.php');
-$sql = "SELECT naam FROM clients";
-$con = $conn->query($sql);
 
 ?>
 <!DOCTYPE html>

@@ -559,12 +559,12 @@ footer p {
 .add-to-cart {
     width: 100px;
     height: 30px;
-    border: none;
+    border: 1px solid #4e4d4d9e;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #0000009e;
-    background-color: rgba(32, 30, 30, 0.434);
+    background-color: rgba(32, 30, 30, 0.219);
     box-shadow: #00ec59;
+    color: white;
 }
 
 
