@@ -17,12 +17,12 @@ include('dbcalls/db_connection.php');
 
 <body>
   <nav>
-    <div class="logo">Pizzeria Latina</div>
+    <div class="logo"><a href="index.php">Pizzeria Latina</a></div>
     <ul>
 
-      <li><a href="index.php">Home</a></li>
       <li><a href="pages/menu.php">Menu</a></li>
       <li><a href="pages/about.php">About</a></li>
+      <li><a href="pages/club.php">Club</a></li>
     </ul>
   </nav>
 

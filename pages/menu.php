@@ -14,12 +14,12 @@ include('../dbcalls/read.php'); ?>
 
 <body>
   <nav>
-    <div class="logo">Pizzeria Latina</div>
+    <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
     <ul>
 
-      <li><a href="../index.php">Home</a></li>
       <li><a href="menu.php">Menu</a></li>
       <li><a href="about.php">About</a></li>
+      <li><a href="club.php">Club</a></li>
     </ul>
   </nav>
   <section class="back-blur">

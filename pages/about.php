@@ -15,27 +15,28 @@ $con = $conn->prepare($sql); ?>
 
 <body>
     <nav>
-        <div class="logo">Pizzeria Latina</div>
+        <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>
 
-            <li><a href="../index.php">Home</a></li>
             <li><a href="menu.php">Menu</a></li>
             <li><a href="about.php">About</a></li>
+            <li><a href="club.php">Club</a></li>
         </ul>
     </nav>
 
     <section class="main-content">
-        <div class="about-content">
-        <div class="about-window">
-            <h1 class="dancing">About Us</h1>
-            <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
+        <div class="form-content">
+            <div class="form-window">
+                <h1 class="dancing">About Us</h1>
+                <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
 
-            <h2 class="dancing">Contact Information</h2>
-            <ul>
-                <p class="italiano-style"> <strong>Address:</strong> <?php echo $Address; ?> </p>
-                <p class="italiano-style"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
-                <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
-            </ul>
+                <h2 class="dancing">Contact Information</h2>
+                <ul>
+                    <p class="italiano-style"> <strong>Address:</strong> <?php echo $Address; ?> </p>
+                    <p class="italiano-style"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
+                    <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
+                </ul>
+            </div>
         </div>
         <div class="cartSidebar">
             <h3>Carrito</h3>
@@ -43,33 +44,9 @@ $con = $conn->prepare($sql); ?>
             <div id="cartTotal">Total: €0.00</div>
             <button id="checkoutBtn">afrekenen</button>
         </div>
-</div>
-        <!-- <div class="reviews">
-            <div class="rv-box">
-                <ul>
-                    <?php
-                    echo "<li>" . $namen[0] . "</li>";
-                    ?>
-                </ul>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[1] . "</li>";
-                ?>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[2] . "</li>";
-                ?>
-            </div>
-            <div class="rv-box">
-                <?php
-                echo "<li>" . $namen[3] . "</li>";
-                ?>
-            </div>
-        </div> -->
 
     </section>
+
 
     <footer>
         <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
