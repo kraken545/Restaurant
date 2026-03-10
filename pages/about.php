@@ -13,7 +13,7 @@ $con = $conn->prepare($sql); ?>
     <link rel="stylesheet" href="../pages/style.css" />
 </head>
 
-<body>
+<body class="bckabout">
     <nav>
         <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>

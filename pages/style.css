@@ -20,6 +20,11 @@ body {
     background-size: cover;
 }
 
+.bckabout {
+
+    backdrop-filter: blur(4px);
+}
+
 .italiano-style {
     font-family: "Italianno", cursive;
     font-weight: 400;
@@ -236,8 +241,8 @@ p {
 .form-window {
     width: 50%;
     height: 50vh;
-    backdrop-filter: brightness(0.6);
-    background-color: transparent;
+
+    background-color: rgba(0, 0, 0, 0.265);
     justify-content: center;
     align-items: center;
 
@@ -389,6 +394,10 @@ h2 {
 
 }
 
+@media (max-width: 768px) {}
+
+
+
 .text-menu {
     text-align: center;
     font-size: 3em;
@@ -397,6 +406,7 @@ h2 {
 
 
 }
+
 
 
 .menu-container h1 {
@@ -565,7 +575,7 @@ h2 {
 }
 
 /* Responsive menu */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .menu-items {
         grid-template-columns: 1fr;
     }
@@ -580,6 +590,19 @@ h2 {
 
     .menu-section h2 {
         font-size: 1.5em;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        display: flex;
+        gap: 25px;
+    }
+
+    .menu-section {
+        width: 50%;
+        height: 500px;
+        align-self: center;
+        height: auto;
     }
 }
 
@@ -661,7 +684,7 @@ footer p {
     align-self: flex-start;
     justify-self: center;
     flex-direction: column;
-    backdrop-filter: brightness(0.6);
+    background-color: rgba(0, 0, 0, 0.265);
     padding: 20px;
     margin: 20px;
     border-radius: 5%;
