@@ -20,7 +20,7 @@ include('../dbcalls/db_connection.php');
             <li><a href="menu.php">Menu</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="club.php">Club</a></li>
-            <li class="login-item"><a href="admin.php">Login Admin</a></li>
+            <li class="login-item"><a href="../admin/login_admin.php">Login Admin</a></li>
         </ul>
     </nav>
     <section class="sec-club">

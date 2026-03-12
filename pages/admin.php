@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+?>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -15,7 +18,7 @@
             <li><a href="menu.php">Menu</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="club.php">Club</a></li>
-            <li class="login-item"><a href="admin.php">Admin</a></li>
+            <li class="login-item"><a href="../index.php">Logout</a></li>
         </ul>
     </nav>
 
@@ -23,14 +26,32 @@
         <div class="admin-card">
             <h1>Admin Panel</h1>
 
-            <div class="admin-actions">
+
+            <div class="product-box">
+                <form action="post"></form>
+            </div>
+            <!-- <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div>
+            <div class="product-box"></div> -->
+
+            <!-- <div class="admin-actions">
                 <button type="button">Product Bekijken</button>
                 <button type="button">Add Product</button>
                 <button type="button">Product Bewerken</button>
                 <button type="button">Product Verwijderen</button>
-            </div>
+                
+            </div> -->
 
-            <div class="admin-box">
+
+            <!-- <div class="admin-box">
                 <h2>New Product</h2>
                 <form action="" method="post">
                     <input type="text" name="name" placeholder="Product Name" required />
@@ -38,7 +59,7 @@
                     <input type="text" name="description" placeholder="Description" required />
                     <button type="submit">Save</button>
                 </form>
-            </div>
+            </div> -->
         </div>
     </section>
 
