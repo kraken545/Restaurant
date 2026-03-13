@@ -30,18 +30,18 @@ if (isset($_GET['edit_id'])) {
     <nav>
         <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>
-           <h1 class="dancing">Admin Panel</h1>
+            <h1 class="dancing">Admin Panel</h1>
             <li class="login-item"><a href="../index.php">Logout</a></li>
         </ul>
     </nav>
 
     <section class="admin-section">
-        
+
         <div class="product-box" id="scrolbar">
             <h2>Product List</h2>
             <table>
                 <thead>
-                    <tr>
+                    <tr class="trt">
                         <th>ID</th>
                         <th>Name</th>
                         <th>Type</th>
@@ -60,8 +60,8 @@ if (isset($_GET['edit_id'])) {
                             <td>€<?php echo number_format($item['price'], 2); ?></td>
                             <td id="omschrijvingl"><?php echo htmlspecialchars($item['omschrijving']); ?></td>
                             <td id="btn">
-                                <button id="edit-btn"><a href="admin.php?edit_id=<?php echo $item['id']; ?>">Edit</a></button> 
-                                <button id="delete-btn"><a href="../product/delete_poduct.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Product verwijderen?');">Delete</a></button>
+                                <button id="edit-btn"><a href="admin.php?edit_id=<?php echo $item['id']; ?>">Edit</a></button>
+                                <button type="submit" id="delete-btn"><a href="../product/delete_product.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Product verwijderen?');">Delete</a></button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -72,7 +72,7 @@ if (isset($_GET['edit_id'])) {
 
 
         <div class="admin-card">
-            
+
 
             <div class="product-box-above">
                 <h2><?php echo $editMode ? 'Edit Product' : 'Create Product'; ?></h2>
@@ -84,11 +84,11 @@ if (isset($_GET['edit_id'])) {
                     <input type="text" name="type" placeholder="type" value="<?php echo $editMode ? htmlspecialchars($editItem['type']) : ''; ?>" />
                     <input type="number" name="price" step="0.01" placeholder="Price (€)" value="<?php echo $editMode ? htmlspecialchars($editItem['price']) : ''; ?>" />
                     <input id="omschrijving" type="text" name="omschrijving" placeholder="omschrijving" value="<?php echo $editMode ? htmlspecialchars($editItem['omschrijving']) : ''; ?>" />
-                    <button type="submit"><?php echo $editMode ? 'Update' : 'Add'; ?></button>
+                    <button type="submit"><?php echo $editMode ? 'Update' : 'Add'; ?></button> <?php if ($editMode): ?>
+                        <button id="cancel-btn"><a href="admin.php">Cancel</a></button>
+                    <?php endif; ?>
                 </form>
-                <?php if ($editMode): ?>
-                    <p><a href="admin.php">Cancel editing</a></p>
-                <?php endif; ?>
+
             </div>
         </div>
 

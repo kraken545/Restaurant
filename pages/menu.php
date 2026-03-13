@@ -10,6 +10,9 @@ include('../dbcalls/read.php'); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $Restaurant_name; ?> - Menu</title>
   <link rel="stylesheet" href="../pages/style.css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -38,8 +41,7 @@ include('../dbcalls/read.php'); ?>
       // Agrupar por type desde la DB
       $menu_by_type = [];
       foreach ($menu_items as $item) {
-        $type = trim($item['type']) ?: 'Unknown';
-        $type = ($type == 'Bebida') ? 'drinks' : $type;
+        $type = $item['type'];
         if (!isset($menu_by_type[$type])) {
           $menu_by_type[$type] = [];
         }
@@ -54,9 +56,9 @@ include('../dbcalls/read.php'); ?>
         }
       ?>
         <div class="menu-section" id="scrolbar">
-          <h2>
+          <h2 class="menu-title" data-text="<?php echo $section_name == 'drinks' ? '🥤 Drinks' : ($section_name == 'Pizza' ? '🍕 Pizzas' : ($section_name == 'Dessert' ? '🍰 Desserts' : ($section_name == 'Aperitivo' ? '🍽️ Appetizers' : $section_name))); ?>">
             <?php
-            echo $section_name === 'drinks' ? '🥤 Drinks' : ($section_name === 'Pizza' ? '🍕 Pizzas' : ($section_name === 'Dessert' ? '🍰 Desserts' : ($section_name === 'Aperitivo' ? '🍽️ Appetizers' : $section_name)));
+            echo $section_name == 'drinks' ? '🥤 Drinks' : ($section_name == 'Pizza' ? '🍕 Pizzas' : ($section_name == 'Dessert' ? '🍰 Desserts' : ($section_name == 'Aperitivo' ? '🍽️ Appetizers' : $section_name)));
             ?>
           </h2>
           <div class="menu-items">
@@ -83,6 +85,29 @@ include('../dbcalls/read.php'); ?>
 
 
 
+  <script type="text/babel">
+    const MenuTitle = ({ text }) => {
+      const [hovered, setHovered] = React.useState(false);
+      const style = {
+        transition: 'transform 0.3s ease',
+        transform: hovered ? 'scale(1.1) rotate(5deg)' : 'scale(1) rotate(0deg)',
+        display: 'inline-block',
+        cursor: 'pointer'
+      };
+      return React.createEl1ement('span', {
+        style,
+        onMouseEnter: () => setHovered(true),
+        onMouseLeave: () => setHovered(false)
+      }, text);
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.menu-title').forEach(el => {
+        const text = el.getAttribute('data-text');
+        ReactDOM.render(React.createElement(MenuTitle, { text }), el);
+      });
+    });
+  </script>
   <script src="cart.js"></script>
 </body>
 </html>

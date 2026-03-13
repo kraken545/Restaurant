@@ -45,7 +45,7 @@
   const checkout = document.getElementById('checkoutBtn');
   if(checkout){
     checkout.addEventListener('click', function(){
-      if(cart.length === 0){ alert('de cart is empty.'); return; }
+      if(cart.length === 0){ alert('you want to buy nothing mmmmhhhhhh : |  .'); return; }
       // Simple behaviour: show summary then clear
       const names = cart.map(i => i.name + ' €' + i.price.toFixed(2)).join('\n');
       const total = cart.reduce((s,i)=>s+i.price,0).toFixed(2);

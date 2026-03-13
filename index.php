@@ -43,13 +43,7 @@ include('dbcalls/db_connection.php');
         <p class="italiano-style groter">Enjoy our delicious pizzas and more!</p>
       </div>
     </div>
-    <div class="cartSidebar">
-      <h3>Carrito</h3>
-      <div id="cartItems"></div>
-      <div class="afrekenen-cart">
-        <div id="cartTotal">Total: €0.00</div>
-        <button id="checkoutBtn">afrekenen</button>
-      </div>
+   
     </div>
   </section>
 

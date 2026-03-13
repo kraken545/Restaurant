@@ -1,7 +1,6 @@
 <?php include('data.php');
 include('../dbcalls/db_connection.php');
-$sql = "SELECT naam FROM clients";
-$con = $conn->prepare($sql); ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,22 +27,17 @@ $con = $conn->prepare($sql); ?>
         <div class="form-content">
             <div class="form-window">
                 <h1 class="dancing">About Us</h1>
-                <h3 class="italiano-style">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
+                <h3 class="roboto">Welcome to our pizzeria! We serve delicious Italian cuisine in a warm atmosphere.</h3>
 
                 <h2 class="dancing">Contact Information</h2>
                 <ul>
-                    <p class="italiano-style"> <strong>Address:</strong> <?php echo $Address; ?> </p>
-                    <p class="italiano-style"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
-                    <p class="italiano-style"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
+                    <p class="roboto" > <strong>Address:</strong> <?php echo $Address; ?> </p>
+                    <p class="roboto"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
+                    <p class="roboto"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
                 </ul>
             </div>
         </div>
-        <div class="cartSidebar">
-            <h3>Carrito</h3>
-            <ul id="cartItems"></ul>
-            <div id="cartTotal">Total: €0.00</div>
-            <button id="checkoutBtn">afrekenen</button>
-        </div>
+       
 
     </section>
 
@@ -54,7 +48,7 @@ $con = $conn->prepare($sql); ?>
 
 
 
-    <script src="cart.js"></script>
+    <script src="../pages/cart.js"></script>
 </body>
 
 </html>
