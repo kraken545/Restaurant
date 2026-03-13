@@ -101,8 +101,14 @@ nav ul li a:hover {
     backdrop-filter: blur(5px);
 
 }
+nav h1 {
+    color: #00ec59;
+    text-shadow: #000000 1px 1px 2px;
+    text-align: center;
+    margin-top: -10px;
+    
 
-
+}
 /* Headings */
 h1 {
     color: #c8102e;
@@ -232,7 +238,7 @@ p {
 
 
 .login-window {
-    width:400px;
+    width: 400px;
     height: 45vh;
     padding: 20px;
     border-radius: 25px;
@@ -242,6 +248,7 @@ p {
     align-items: center;
     backdrop-filter: blur(8px);
 }
+
 .login-window form {
     width: 100%;
     height: 100%;
@@ -251,6 +258,7 @@ p {
     align-items: center;
     gap: 20px;
 }
+
 .login-window input {
     display: flex;
     justify-content: center;
@@ -323,29 +331,24 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    padding: 20px;
+
 
 }
 
 .admin-card {
-    width: 80%;
+    width: 50%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
 }
 
-.admin-card h1 {
-    color: #00ec59;
-    width: 70%;
-    text-align: center;
 
-}
 
 .admin-actions {
     width: 90%;
@@ -364,7 +367,7 @@ h2 {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease++;
+    transition: background-color 0.3s ease;
 }
 
 .admin-box {
@@ -421,13 +424,156 @@ h2 {
 
 /* Menu page styling */
 .menu-container {
-    width: 95%;
+    width: 100%;
     align-self: center;
     height: 80vh;
     display: flex;
     justify-content: space-evenly;
     background-color: transparent;
+    padding: 0 200px 0 0;
 
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    height: 65vh;
+
+
+}
+
+.product-box table {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.product-box thead tr {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#actiob {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 53%;
+}
+
+.product-box tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: auto;
+    background-color: #00000063;
+
+}
+.product-box tr{
+    display: flex;
+    gap: 5px;
+}
+
+.product-box th,
+.product-box td {
+    width: 150px;
+    height: auto;
+    display: flex;
+    padding: 10px;
+ 
+
+}
+#delete-btn {
+background-color: #ff0000;
+}
+#edit-btn {
+    background-color: #00ff08;
+    
+}
+
+#edit-btn, #delete-btn {
+    width: 80px;
+    text-decoration: none;
+    height: 30px;
+    border: 1px solid #ffffff8b;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+#edit-btn a, #delete-btn a {
+    color: #000000;
+    text-decoration: none;
+    text-shadow: #ffffff 1px 1px 2px;
+
+}
+#btn {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+
+.product-box td {
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-weight: bold;
+    border: #4aff5fb4 solid 1px;
+}
+
+.product-box h2 {
+    position: absolute;
+    top: 154px;
+    left: 337px;
+}
+
+.product-box-above {
+
+    width: 100%;
+    height: 50vh;
+}
+
+.product-box-above input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+
+
+
+}
+
+.product-box-above form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#omschrijving {
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    
+
+}
+#omschrijvingl {
+    width: 300px;
 }
 
 @media (max-width: 768px) {}
@@ -535,7 +681,7 @@ h2 {
 
 .menu-item {
     background-color: #fafafa;
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
