@@ -19,7 +19,7 @@
 
     <section class="form-content">
         <div class="login-window">
-            <h1>Login</h1>
+            <h2>Login</h2>
             <form action="login_admin_process.php" method="post">
                 <input type="text" name="username" placeholder="User" required />
                 <input type="password" name="password" placeholder="Password" required />

@@ -38,7 +38,7 @@ include('../dbcalls/read.php'); ?>
     <section class="menu-container">
 
       <?php
-      // Agrupar por type desde la DB
+
       $menu_by_type = [];
       foreach ($menu_items as $item) {
         $type = $item['type'];
@@ -48,7 +48,7 @@ include('../dbcalls/read.php'); ?>
         $menu_by_type[$type][] = $item;
       }
 
-      // Orden preferido para mostrar secciones
+
       $section_order = ['Pizza', 'drinks', 'Dessert', 'Aperitivo', 'Unknown'];
       foreach ($section_order as $section_name) {
         if (!isset($menu_by_type[$section_name])) {
@@ -65,7 +65,7 @@ include('../dbcalls/read.php'); ?>
             <?php foreach ($menu_by_type[$section_name] as $item): ?>
               <div class="menu-item">
                 <h3><?php echo htmlspecialchars($item['naam']); ?></h3>
-                <p><?php echo htmlspecialchars($item['omschrijving'] ?: 'Description not available'); ?></p>
+                <p><?php echo htmlspecialchars($item['omschrijving'] ?: ''); ?></p>
                 <div class="menu-meta">
                   <span class="price">€<?php echo number_format(floatval($item['price']), 2); ?></span>
                   <button class="add-to-cart" data-name="<?php echo htmlspecialchars($item['naam']); ?>" data-price="<?php echo floatval($item['price']); ?>"><?php echo $add; ?></button>
@@ -79,7 +79,7 @@ include('../dbcalls/read.php'); ?>
       ?>
     </section>
   </section>
- <footer>
+  <footer>
     <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
@@ -110,4 +110,5 @@ include('../dbcalls/read.php'); ?>
   </script>
   <script src="cart.js"></script>
 </body>
+
 </html>

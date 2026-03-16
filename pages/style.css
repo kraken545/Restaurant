@@ -27,15 +27,18 @@ body {
     flex-direction: column;
     background-size: cover;
 }
-.sec-club{
+
+.sec-club {
     height: 100%;
     width: 100%;
 }
-.about-window h2{
+
+.about-window h2 {
     font-weight: bolder;
-   
-   
+
+
 }
+
 .bckabout {
 
     backdrop-filter: blur(4px);
@@ -55,8 +58,9 @@ body {
     font-weight: 400;
     font-family: 'Dancing Script', cursive;
 }
+
 .roboto {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
     justify-self: center;
@@ -505,7 +509,7 @@ h2 {
 }
 
 #actiob {
-    margin-left: 65px;
+    margin-left: 30px;
 }
 
 .product-box tbody {
@@ -515,7 +519,7 @@ h2 {
     width: 100%;
     height: auto;
     background-color: #00000063;
-    
+
 
 }
 
@@ -538,7 +542,7 @@ h2 {
 
 .product-box th {
     display: flex;
-    width: 100px;
+    width: 85px;
     color: white;
 
 }
@@ -559,6 +563,16 @@ h2 {
 #edit-btn {
     background-color: #00ff08;
 
+}
+
+#delete-btn:hover {
+    background-color: #be0b0b;
+    padding: 8px;
+}
+
+#edit-btn:hover {
+    background-color: #09ca0f;
+    padding: 8px;
 }
 
 #edit-btn,

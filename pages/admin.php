@@ -30,7 +30,7 @@ if (isset($_GET['edit_id'])) {
     <nav>
         <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>
-            <h1 class="dancing">Admin Panel</h1>
+            <h1 class="roboto">Admin Panel</h1>
             <li class="login-item"><a href="../index.php">Logout</a></li>
         </ul>
     </nav>
@@ -58,7 +58,7 @@ if (isset($_GET['edit_id'])) {
                             <td><?php echo htmlspecialchars($item['naam']); ?></td>
                             <td><?php echo htmlspecialchars($item['type']); ?></td>
                             <td>€<?php echo number_format($item['price'], 2); ?></td>
-                            <td id="omschrijvingl"><?php echo htmlspecialchars($item['omschrijving']); ?></td>
+                            <td id="omschrijvingl"><?php echo empty($item['omschrijving']) ? 'empty' : htmlspecialchars($item['omschrijving']); ?></td>
                             <td id="btn">
                                 <button id="edit-btn"><a href="admin.php?edit_id=<?php echo $item['id']; ?>">Edit</a></button>
                                 <button type="submit" id="delete-btn"><a href="../product/delete_product.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Product verwijderen?');">Delete</a></button>
