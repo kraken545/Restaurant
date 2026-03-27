@@ -1,8 +1,6 @@
 <?php
-
 include('../dbcalls/db_connection.php');
-
-
+session_start();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -25,12 +23,24 @@ if (!$user) {
 
 $storedPassword = $user['password'];
 
-// Soporta hash de password y también texto plano (para compatibilidad con registros antiguos)
+
 if (password_verify($password, $storedPassword) || $password == $storedPassword) {
     $_SESSION['admin_username'] = $user['username'];
     header('Location: ../pages/admin.php');
+    
+   
     exit;
 }
+if(isset($_POST["login"])){
+    
+    if(!empty($_POST["username"]) && !empty($_POST["password"])){
+        $_SESSION["usernam"] = $_POST["username"];
+        $_SESSION["password"] = $_POST['password'];
 
-header('Location: login_admin.php?error=invalid+credentials');
+
+
+        header("Location: admin.php");
+    }  
+}
+
 exit;

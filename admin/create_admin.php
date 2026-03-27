@@ -9,36 +9,36 @@ if (!isset($_SESSION['admin_username'])) {
     exit;
 }
 
-$success = '';
-$error = '';
+// $success = '';
+// $error = '';
 
-$username = trim($_POST['username'] ?? '');
-$password = $_POST['password'] ?? '';
+// $username = trim($_POST['username'] ?? '');
+// $password = $_POST['password'] ?? '';
 
-if ($username === '' || $password === '') {
-    $error = 'username and password required';
-} else {
-    // Verificar si el usuario ya existe
-    $verify = 'SELECT id FROM admin WHERE username = :username LIMIT 1';
-    $stmt = $conn->prepare($verify);
-    $stmt->bindParam(':username', $username);
-    $stmt->execute();
+// if ($username === '' || $password === '') {
+//     $error = 'username and password required';
+// } else {
+//     // Verificar si el usuario ya existe
+//     $verify = 'SELECT id FROM admin WHERE username = :username LIMIT 1';
+//     $stmt = $conn->prepare($verify);
+//     $stmt->bindParam(':username', $username);
+//     $stmt->execute();
 
-    if ($stmt->fetch(PDO::FETCH_ASSOC)) {
-        $error = 'El usuario ya existe.';
-    } else {
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-        $insert = 'INSERT INTO admin (username, password) VALUES (:username, :password)';
-        $stmt = $conn->prepare($insert);
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $hash);
-        $stmt->execute();
-        $success = 'Administrador creado correctamente.';
-    }
-}
+//     if ($stmt->fetch(PDO::FETCH_ASSOC)) {
+//         $error = 'El usuario ya existe.';
+//     } else {
+//         $hash = password_hash($password, PASSWORD_DEFAULT);
+//         $insert = 'INSERT INTO admin (username, password) VALUES (:username, :password)';
+//         $stmt = $conn->prepare($insert);
+//         $stmt->bindParam(':username', $username);
+//         $stmt->bindParam(':password', $hash);
+//         $stmt->execute();
+//         $success = 'Administrador creado correctamente.';
+//     }
+// }
 
 
-?>
+// ?>
 <!DOCTYPE html>
 <html lang="es">
 

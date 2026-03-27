@@ -1,4 +1,4 @@
-// Simple cart script: keeps cart in localStorage and updates sidebar
+// extra gemaakt met ai voor interactive cart
 (function(){
   const addButtons = document.querySelectorAll('.add-to-cart');
   const cartKey = 'simpleCart';

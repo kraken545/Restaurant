@@ -22,6 +22,7 @@ include('../dbcalls/db_connection.php');
             <li><a href="club.php">Club</a></li>
         </ul>
     </nav>
+    <add-button></add-button>
 
     <section class="main-content">
         <div class="form-content">
@@ -50,5 +51,6 @@ include('../dbcalls/db_connection.php');
 
     <script src="../pages/cart.js"></script>
 </body>
+<script src="../component/component1.js"></script>
 
 </html>

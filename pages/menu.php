@@ -83,32 +83,40 @@ include('../dbcalls/read.php'); ?>
     <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
   </footer>
 
+  <!-- CHATBOT SECTION - ABAJO A LA DERECHA
+  <div class="chatbot-container">
+    <div class="chatbot-toggle" id="chatbotToggle">
+      <span class="chatbot-icon">🤖</span>
+      <span class="chatbot-text">Ayuda IA</span>
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <h3>Asistente IA del Restaurante</h3>
+        <button class="chatbot-close" id="chatbotClose">&times;</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+          <div class="message-avatar">🤖</div>
+          <div class="message-content">
+            ¡Hola! Soy tu asistente IA. Puedo ayudarte con información sobre nuestros platos, recomendaciones y preguntas sobre el menú. ¿En qué puedo ayudarte?
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbotInput" placeholder="Escribe tu mensaje..." maxlength="200">
+        <button id="chatbotSend" class="chatbot-send-btn">
+          <span class="send-icon">📤</span>
+        </button>
+      </div>
+    </div>
+  </div> -->
 
-
-  <script type="text/babel">
-    const MenuTitle = ({ text }) => {
-      const [hovered, setHovered] = React.useState(false);
-      const style = {
-        transition: 'transform 0.3s ease',
-        transform: hovered ? 'scale(1.1) rotate(5deg)' : 'scale(1) rotate(0deg)',
-        display: 'inline-block',
-        cursor: 'pointer'
-      };
-      return React.createEl1ement('span', {
-        style,
-        onMouseEnter: () => setHovered(true),
-        onMouseLeave: () => setHovered(false)
-      }, text);
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.menu-title').forEach(el => {
-        const text = el.getAttribute('data-text');
-        ReactDOM.render(React.createElement(MenuTitle, { text }), el);
-      });
-    });
-  </script>
+  
   <script src="cart.js"></script>
+  <!-- <script src="chatbot.js"></script> -->
 </body>
 
 </html>
