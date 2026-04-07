@@ -8,7 +8,7 @@ include('dbcalls/db_connection.php');
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo $Restaurant_name; ?> - Home</title>
+  <title><?php echo $restaurantName; ?> - Home</title>
   <link rel="stylesheet" href="pages/style.css" />
 </head>
 
@@ -29,7 +29,7 @@ include('dbcalls/db_connection.php');
       <div class="pizza-content-div">
         <h1 class="dancing">
           Welcome to
-          <?php echo $Restaurant_name; ?>
+          <?php echo $restaurantName; ?>
         </h1>
         <p class="italiano-style groter">
           Experience the finest Latin cuisine in a warm and welcoming
@@ -47,7 +47,7 @@ include('dbcalls/db_connection.php');
 
 
   <footer>
-    <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="dancing">&copy; 2026 <?php echo $restaurantName; ?>. All rights reserved.</p>
   </footer>
 
 

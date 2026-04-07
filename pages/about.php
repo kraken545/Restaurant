@@ -33,9 +33,9 @@ include('../dbcalls/db_connection.php');
 
                 <h2 class="dancing">Contact Information</h2>
                 <ul>
-                    <p class="roboto" > <strong>Address:</strong> <?php echo $Address; ?> </p>
-                    <p class="roboto"> <strong>Phone:</strong> <?php echo $Phone_number; ?></p>
-                    <p class="roboto"><strong>Opening Hours:</strong> <?php echo $Opening_hours; ?></p>
+                    <p class="roboto" > <strong>Address:</strong> <?php echo $address; ?> </p>
+                    <p class="roboto"> <strong>Phone:</strong> <?php echo $phoneNumber; ?></p>
+                    <p class="roboto"><strong>Opening Hours:</strong> <?php echo $openingHours; ?></p>
                 </ul>
             </div>
         </div>
@@ -45,7 +45,7 @@ include('../dbcalls/db_connection.php');
 
 
     <footer>
-        <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+        <p class="dancing">&copy; 2026 <?php echo $restaurantName; ?>. All rights reserved.</p>
     </footer>
 
 

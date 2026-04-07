@@ -36,45 +36,39 @@ include('../dbcalls/read.php'); ?>
 
       <?php
 
-      $menu_by_type = [];
+      // Haal alle unieke categorieën op vanuit de database (geen vaste lijst)
+      $categories = [];
       foreach ($menu_items as $item) {
-        $type = $item['type'];
-        if (!isset($menu_by_type[$type])) {
-          $menu_by_type[$type] = [];
+        $cat = $item['type'];
+        if (!in_array($cat, $categories)) {
+          $categories[] = $cat;
         }
-        $menu_by_type[$type][] = $item;
       }
 
-
-      $section_order = ['Pizza', 'drinks', 'Dessert', 'Aperitivo', 'Unknown'];
-      foreach ($section_order as $section_name) {
-        if (!isset($menu_by_type[$section_name])) {
-          continue;
-        }
-
-        $label = match($section_name) {
-          'drinks'    => '🥤 Drinks',
-          'Pizza'     => '🍕 Pizzas',
-          'Dessert'   => '🍰 Desserts',
-          'Aperitivo' => '🍽️ Appetizers',
-          default     => $section_name
-        };
+      // Loop door elke categorie en filter de items
+      foreach ($categories as $categorie) {
       ?>
         <div class="menu-section" id="scrolbar">
-          <h2 class="menu-title" data-text="<?php echo $label; ?>">
-            <?php echo $label; ?>
+          <h2 class="menu-title" data-text="<?php echo htmlspecialchars($categorie); ?>">
+            <?php echo htmlspecialchars($categorie); ?>
           </h2>
           <div class="menu-items">
-            <?php foreach ($menu_by_type[$section_name] as $item): ?>
-              <div class="menu-item">
-                <h3><?php echo htmlspecialchars($item['naam']); ?></h3>
-                <p><?php echo htmlspecialchars($item['omschrijving'] ?: ''); ?></p>
-                <div class="menu-meta">
-                  <span class="price">€<?php echo number_format(floatval($item['price']), 2); ?></span>
-                  <button class="add-to-cart" data-name="<?php echo htmlspecialchars($item['naam']); ?>" data-price="<?php echo floatval($item['price']); ?>"><?php echo $add; ?></button>
+            <?php foreach ($menu_items as $item){ ?>
+              <?php if ($item['type'] == $categorie){ ?>
+                <div class="menu-item">
+                  <h3><?php echo htmlspecialchars($item['naam']); ?></h3>
+                  <p><?php echo htmlspecialchars($item['omschrijving'] ?: ''); ?></p>
+                  <div class="menu-meta">
+                    <span class="price">€<?php echo number_format(floatval($item['price']), 2); ?></span>
+                    <button class="add-to-cart"
+                      data-name="<?php echo htmlspecialchars($item['naam']); ?>"
+                      data-price="<?php echo floatval($item['price']); ?>">
+                      <?php echo $add; ?>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            <?php endforeach; ?>
+              <?php } ?>
+            <?php } ?>
           </div>
         </div>
       <?php
@@ -83,7 +77,7 @@ include('../dbcalls/read.php'); ?>
     </section>
   </section>
   <footer>
-    <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="dancing">&copy; 2026 <?php echo $restaurantName; ?>. All rights reserved.</p>
   </footer>
 
   <!-- CHATBOT SECTION - ABAJO A LA DERECHA

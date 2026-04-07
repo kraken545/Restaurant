@@ -63,11 +63,17 @@ if (isset($_GET['edit_id'])) {
 
                     <?php foreach ($menu_items as $item): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($item['id']); ?></td>
-                            <td><?php echo htmlspecialchars($item['naam']); ?></td>
-                            <td><?php echo htmlspecialchars($item['type']); ?></td>
-                            <td>€<?php echo number_format($item['price'], 2); ?></td>
-                            <td id="omschrijvingl"><?php echo empty($item['omschrijving']) ? 'empty' : htmlspecialchars($item['omschrijving']); ?></td>
+                            <td><?php echo ($item['id']); ?></td>
+                            <td><?php echo ($item['naam']); ?></td>
+                            <td><?php echo ($item['type']); ?></td>
+                            <td>€<?php echo ($item['price']); ?></td>
+                            <td id="omschrijvingl">
+                                <?php if (isset($item['omschrijving'])) {
+                                    echo $item['omschrijving'];
+                                } else {
+                                   echo '';
+                                } ?>
+                            </td>
                             <td id="btn">
                                 <button id="edit-btn"><a href="admin.php?edit_id=<?php echo $item['id']; ?>">Edit</a></button>
                                 <button type="submit" id="delete-btn"><a href="../product/delete_product.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Product verwijderen?');">Delete</a></button>

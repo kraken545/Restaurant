@@ -47,7 +47,7 @@ include('../dbcalls/db_connection.php');
     </section>
 </body>
 <footer>
-    <p class="dancing">&copy; 2026 <?php echo $Restaurant_name; ?>. All rights reserved.</p>
+    <p class="dancing">&copy; 2026 <?php echo $restaurantName; ?>. All rights reserved.</p>
 </footer>
 
 
