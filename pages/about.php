@@ -20,6 +20,7 @@ include('../dbcalls/db_connection.php');
             <li><a href="menu.php">Menu</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="club.php">Club</a></li>
+
         </ul>
     </nav>
     <add-button></add-button>

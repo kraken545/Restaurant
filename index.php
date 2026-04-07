@@ -10,9 +10,6 @@ include('dbcalls/db_connection.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $Restaurant_name; ?> - Home</title>
   <link rel="stylesheet" href="pages/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,6 +20,7 @@ include('dbcalls/db_connection.php');
       <li><a href="pages/menu.php">Menu</a></li>
       <li><a href="pages/about.php">About</a></li>
       <li><a href="pages/club.php">Club</a></li>
+     
     </ul>
   </nav>
 

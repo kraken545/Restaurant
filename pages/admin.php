@@ -1,4 +1,13 @@
-﻿<?php
+<?php
+session_start();
+
+// ─── PROTECCIÓN: solo admins logueados pueden entrar ───
+// Si no hay sesión activa, redirigir al login
+if (!isset($_SESSION['admin_username'])) {
+    header('Location: ../admin/login_admin.php');
+    exit;
+}
+
 include('../dbcalls/read.php');
 include('../dbcalls/db_connection.php');
 
@@ -31,7 +40,7 @@ if (isset($_GET['edit_id'])) {
         <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>
             <h1 class="roboto">Admin Panel</h1>
-            <li class="login-item"><a href="../index.php">Logout</a></li>
+            <li class="login-item"><a href="../admin/logout_admin.php">Logout</a></li>
         </ul>
     </nav>
 
