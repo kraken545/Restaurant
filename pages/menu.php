@@ -10,9 +10,6 @@ include('../dbcalls/read.php'); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?php echo $Restaurant_name; ?> - Menu</title>
   <link rel="stylesheet" href="../pages/style.css" />
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -54,12 +51,18 @@ include('../dbcalls/read.php'); ?>
         if (!isset($menu_by_type[$section_name])) {
           continue;
         }
+
+        $label = match($section_name) {
+          'drinks'    => '🥤 Drinks',
+          'Pizza'     => '🍕 Pizzas',
+          'Dessert'   => '🍰 Desserts',
+          'Aperitivo' => '🍽️ Appetizers',
+          default     => $section_name
+        };
       ?>
         <div class="menu-section" id="scrolbar">
-          <h2 class="menu-title" data-text="<?php echo $section_name == 'drinks' ? '🥤 Drinks' : ($section_name == 'Pizza' ? '🍕 Pizzas' : ($section_name == 'Dessert' ? '🍰 Desserts' : ($section_name == 'Aperitivo' ? '🍽️ Appetizers' : $section_name))); ?>">
-            <?php
-            echo $section_name == 'drinks' ? '🥤 Drinks' : ($section_name == 'Pizza' ? '🍕 Pizzas' : ($section_name == 'Dessert' ? '🍰 Desserts' : ($section_name == 'Aperitivo' ? '🍽️ Appetizers' : $section_name)));
-            ?>
+          <h2 class="menu-title" data-text="<?php echo $label; ?>">
+            <?php echo $label; ?>
           </h2>
           <div class="menu-items">
             <?php foreach ($menu_by_type[$section_name] as $item): ?>

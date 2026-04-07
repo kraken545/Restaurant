@@ -1,6 +1,11 @@
 <?php
 include('../dbcalls/db_connection.php');
 
+// Si no es una petición POST, redirigir y salir
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ../pages/admin.php');
+    exit;
+}
 
     $naam = $_POST['naam'];
     $price = $_POST['price'];

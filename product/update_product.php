@@ -1,6 +1,11 @@
 <?php
 include('../dbcalls/db_connection.php');
 
+// Si no es una petición POST, redirigir y salir
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ../pages/admin.php');
+    exit;
+}
 
 $id = (int)$_POST['id'];
 $naam = $_POST['naam'];
@@ -20,5 +25,5 @@ $stmt->bindParam(':id', $id);
 $stmt->execute();
 
 
-header('Location: ../pages/admin.php?error=invalid_method');
+header('Location: ../pages/admin.php?success=updated');
 exit;
