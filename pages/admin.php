@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-// ─── PROTECCIÓN: solo admins logueados pueden entrar ───
-// Si no hay sesión activa, redirigir al login
+
 if (!isset($_SESSION['admin_username'])) {
     header('Location: ../admin/login_admin.php');
     exit;

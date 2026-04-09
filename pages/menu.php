@@ -8,7 +8,7 @@ include('../dbcalls/read.php'); ?>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo $Restaurant_name; ?> - Menu</title>
+  <title><?php echo $restaurantName; ?> - Menu</title>
   <link rel="stylesheet" href="../pages/style.css" />
 </head>
 

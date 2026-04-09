@@ -8,7 +8,7 @@ include('../dbcalls/db_connection.php');
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo $Restaurant_name; ?> - About</title>
+    <title><?php echo $restaurantName; ?> - About</title>
     <link rel="stylesheet" href="../pages/style.css" />
 </head>
 
