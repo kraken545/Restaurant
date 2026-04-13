@@ -2,7 +2,7 @@
 include 'db_connection.php';
 
 
-$menu = "SELECT * FROM MenuItems";
-$stmt = $conn->prepare($menu);
+$sql = "SELECT * FROM MenuItems";
+$stmt = $conn->prepare($sql);
 $stmt->execute();
 $menu_items = $stmt->fetchAll();

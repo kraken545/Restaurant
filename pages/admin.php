@@ -60,12 +60,12 @@ if (isset($_GET['edit_id'])) {
                 </thead>
                 <tbody>
 
-                    <?php foreach ($menu_items as $item): ?>
+                    <?php foreach ($menu_items as $item) { ?>
                         <tr>
                             <td><?php echo ($item['id']); ?></td>
                             <td><?php echo ($item['naam']); ?></td>
                             <td><?php echo ($item['type']); ?></td>
-                            <td>€<?php echo ($item['price']); ?></td>
+                            <td>€ <?php echo number_format(floatval($item['price']), 2); ?></td>
                             <td id="omschrijvingl">
                                 <?php if (isset($item['omschrijving'])) {
                                     echo $item['omschrijving'];
@@ -78,7 +78,7 @@ if (isset($_GET['edit_id'])) {
                                 <button type="submit" id="delete-btn"><a href="../product/delete_product.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Product verwijderen?');">Delete</a></button>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php } ?>
 
                 </tbody>
             </table>
@@ -91,16 +91,16 @@ if (isset($_GET['edit_id'])) {
             <div class="product-box-above">
                 <h2><?php echo $editMode ? 'Edit Product' : 'Create Product'; ?></h2>
                 <form action="../product/<?php echo $editMode ? 'update_product.php' : 'create_product.php'; ?>" method="post">
-                    <?php if ($editMode): ?>
+                    <?php if ($editMode) { ?>
                         <input type="hidden" name="id" value="<?php echo htmlspecialchars($editItem['id']); ?>" />
-                    <?php endif; ?>
+                    <?php } ?>
                     <input type="text" name="naam" placeholder="naam" value="<?php echo $editMode ? htmlspecialchars($editItem['naam']) : ''; ?>" />
                     <input type="text" name="type" placeholder="type" value="<?php echo $editMode ? htmlspecialchars($editItem['type']) : ''; ?>" />
                     <input type="number" name="price" step="0.01" placeholder="Price (€)" value="<?php echo $editMode ? htmlspecialchars($editItem['price']) : ''; ?>" />
                     <input id="omschrijving" type="text" name="omschrijving" placeholder="omschrijving" value="<?php echo $editMode ? htmlspecialchars($editItem['omschrijving']) : ''; ?>" />
-                    <button type="submit"><?php echo $editMode ? 'Update' : 'Add'; ?></button> <?php if ($editMode): ?>
+                    <button type="submit"><?php echo $editMode ? 'Update' : 'Add'; ?></button> <?php if ($editMode) { ?>
                         <button id="cancel-btn"><a href="admin.php">Cancel</a></button>
-                    <?php endif; ?>
+                    <?php } ?>
                 </form>
 
             </div>
