@@ -38,7 +38,7 @@ if (isset($_GET['edit_id'])) {
     <nav>
         <div class="logo"><a href="../index.php">Pizzeria Latina</a></div>
         <ul>
-            <h1 class="roboto">Admin Panel</h1>
+            <h1 class="roboto">Admin Menu</h1>
             <li class="login-item"><a href="../admin/logout_admin.php">Logout</a></li>
         </ul>
     </nav>
